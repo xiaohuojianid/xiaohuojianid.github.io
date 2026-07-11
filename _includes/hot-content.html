@@ -6,15 +6,18 @@
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {% assign cards = "下载中心|/download/|📥|Shadowrocket 下载与安装全流程|shadowrocket-download|教程中心|/tutorial/|📚|从零开始的完整使用教程|tutorial|账号指南|/account/|🔑|共享账号与独享账号详解|account|Apple ID 教程|/ios/|🍎|美区 Apple ID 注册与使用|apple-id|配置教程|/tutorial/#config|⚙️|节点订阅导入与配置|config-sub|常见问题|/faq/|❓|50+ 常见问题解答|faq" | split: "|" %}
+      {% assign cards = "下载中心|/download/|📥|Shadowrocket 下载与安装全流程|教程中心|/tutorial/|📚|从零开始的完整使用教程|账号指南|/account/|🔑|共享账号与独享账号详解|Apple ID 教程|/ios/|🍎|美区 Apple ID 注册与使用|配置教程|/tutorial/#config|⚙️|节点订阅导入与配置|常见问题|/faq/|❓|50+ 常见问题解答" | split: "|" %}
       {% for i in (0..5) %}
-      {% assign base = i | times: 6 %}
-      <a href="{{ cards[base | plus: 1] }}"
+      {% assign base = i | times: 4 %}
+      {% assign idx_url = base | plus: 1 %}
+      {% assign idx_emoji = base | plus: 2 %}
+      {% assign idx_desc = base | plus: 3 %}
+      <a href="{{ cards[idx_url] }}"
          class="reveal opacity-0 translate-y-8 transition-all duration-700 group bg-white dark:bg-gray-800 rounded-2xl p-8 hover:shadow-xl dark:hover:shadow-gray-900/50 transition-shadow border border-gray-100 dark:border-gray-700"
          style="transition-delay: {{ i | times: 100 }}ms">
-        <div class="text-4xl mb-4">{{ cards[base | plus: 2] }}</div>
+        <div class="text-4xl mb-4">{{ cards[idx_emoji] }}</div>
         <h3 class="text-lg font-bold mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">{{ cards[base] }}</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400">{{ cards[base | plus: 3] }}</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400">{{ cards[idx_desc] }}</p>
       </a>
       {% endfor %}
     </div>
