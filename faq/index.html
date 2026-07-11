@@ -12,7 +12,22 @@ faq_jsonld:
     a: 共享账号仅登录 App Store 下载应用，不登录 iCloud，不会影响个人数据。下载完成后退出即可。
 ---
 
-<h2 id="account">账号相关</h2>
+<div class="not-prose mb-10 p-5 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
+  <p class="font-semibold text-gray-900 dark:text-gray-100 mb-3">📋 快速导航</p>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-2 text-sm">
+    <a href="#account" class="px-3 py-2 rounded-lg hover:bg-white dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">📱 账号相关</a>
+    <a href="#download" class="px-3 py-2 rounded-lg hover:bg-white dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">⬇️ 下载相关</a>
+    <a href="#install" class="px-3 py-2 rounded-lg hover:bg-white dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">📲 安装相关</a>
+    <a href="#config" class="px-3 py-2 rounded-lg hover:bg-white dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">⚙️ 配置相关</a>
+    <a href="#errors" class="px-3 py-2 rounded-lg hover:bg-white dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">🔧 错误解决</a>
+    <a href="#account-lock" class="px-3 py-2 rounded-lg hover:bg-white dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">🔒 账号锁定</a>
+    <a href="#other" class="px-3 py-2 rounded-lg hover:bg-white dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">💡 其他问题</a>
+  </div>
+</div>
+
+---
+
+## 📱 账号相关 {#account}
 
 ### 什么是小火箭账号？
 
@@ -22,9 +37,7 @@ faq_jsonld:
 
 共享账号是多人在 App Store 共用但不同时登录 iCloud 的 Apple ID。用户仅使用该账号登录 App Store 下载应用，下载后退出。适合一次性下载、偶尔使用的场景。
 
-### 共享账号安全吗？
-
-共享账号仅登录 App Store，不登录 iCloud，不会影响你的个人数据、照片、通讯录等。下载完成后退出即可。但不要绑定自己的支付方式或手机号。
+{% include tip-box.html type="tip" title="共享账号安全吗？" content="共享账号仅登录 App Store，不登录 iCloud，不会影响你的个人数据、照片、通讯录等。下载完成后退出即可。但不要绑定自己的支付方式或手机号。" %}
 
 ### Apple ID 会被锁吗？
 
@@ -40,7 +53,7 @@ faq_jsonld:
 
 ---
 
-<h2 id="download">下载相关</h2>
+## ⬇️ 下载相关 {#download}
 
 ### Shadowrocket 在哪里下载？
 
@@ -80,7 +93,7 @@ Shadowrocket 仅在 iOS App Store 上架。使用外区（美区/港区）Apple 
 
 ---
 
-<h2 id="install">安装相关</h2>
+## 📲 安装相关 {#install}
 
 ### 为什么安装失败？
 
@@ -89,9 +102,7 @@ Shadowrocket 仅在 iOS App Store 上架。使用外区（美区/港区）Apple 
 - iOS 版本过低（需要 iOS 12.0 以上）
 - 网络不稳定导致下载中断
 
-### Shadowrocket 支持哪些 iOS 版本？
-
-支持 iOS 12.0 及以上版本。
+{% include tip-box.html type="info" title="支持版本" content="Shadowrocket 支持 iOS 12.0 及以上版本。" %}
 
 ### 安装后找不到应用？
 
@@ -99,12 +110,12 @@ Shadowrocket 仅在 iOS App Store 上架。使用外区（美区/港区）Apple 
 
 ---
 
-<h2 id="config">配置相关</h2>
+## ⚙️ 配置相关 {#config}
 
 ### 如何导入订阅？
 
 1. 打开 Shadowrocket
-2. 点击右上角 +
+2. 点击右上角 **+**
 3. 类型选择「Subscribe」
 4. 粘贴订阅链接
 5. 保存即可自动拉取节点
@@ -127,7 +138,7 @@ Clash 配置文件可以通过订阅转换工具转为 Shadowrocket 格式，或
 
 ---
 
-<h2 id="errors">错误解决</h2>
+## 🔧 错误解决 {#errors}
 
 ### 无法连接怎么办？
 
@@ -142,11 +153,7 @@ Clash 配置文件可以通过订阅转换工具转为 Shadowrocket 格式，或
 - 尝试用 Safari 打开链接验证是否可访问
 - 使用蜂窝数据而非 Wi-Fi 更新
 
-### 提示 VPN 配置失败？
-
-- 检查是否有其他 VPN 应用冲突
-- 删除旧 VPN 配置后重试
-- 重启 iPhone 后再试
+{% include tip-box.html type="warning" title="VPN 配置失败？" content="检查是否有其他 VPN 应用冲突。删除旧 VPN 配置后重试，或重启 iPhone 后再试。" %}
 
 ### Shadowrocket 频繁断开？
 
@@ -156,7 +163,7 @@ Clash 配置文件可以通过订阅转换工具转为 Shadowrocket 格式，或
 
 ---
 
-<h2 id="account-lock">账号锁定</h2>
+## 🔒 账号锁定 {#account-lock}
 
 ### Apple ID 被锁了怎么办？
 
@@ -168,11 +175,11 @@ Clash 配置文件可以通过订阅转换工具转为 Shadowrocket 格式，或
 
 ---
 
-<h2 id="other">其他</h2>
+## 💡 其他问题 {#other}
 
 ### Shadowrocket 需要付费吗？
 
-Shadowrocket 在 App Store 是付费应用（约 \\(2.99），需要先购买。购买后永久使用，支持同一 Apple ID 下多设备安装。
+Shadowrocket 在 App Store 是付费应用（约 $2.99），需要先购买。购买后永久使用，支持同一 Apple ID 下多设备安装。
 
 ### 怎么更新 Shadowrocket？
 

@@ -9,10 +9,12 @@ show_cta: true
 
 「小火箭账号」指的是用于下载 Shadowrocket 的 Apple ID。Shadowrocket 是一款仅上架 iOS App Store 的代理工具，由于国区下架了代理类应用，用户需要外区（如美区、港区、日区）Apple ID 来下载。这些 Apple ID 被称为「小火箭账号」。
 
+---
+
 ## 账号类型对比
 
 | 特性 | 🤝 共享账号 | 🔒 独享账号 |
-|------|-------------|-------------|
+|------|:-----------:|:-----------:|
 | 使用人数 | 多人共用 | 一人独享 |
 | 价格 | 低廉 | 较高 |
 | 安全性 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
@@ -20,52 +22,84 @@ show_cta: true
 | iCloud 登录 | 不建议 | 支持 |
 | 适合人群 | 偶尔使用、仅需下载 | 长期使用、追求安全 |
 
-## 共享账号详解
+---
+
+## 🤝 共享账号详解
 
 共享账号是多人共用的 Apple ID，仅需登录 App Store 下载应用。由于不登录 iCloud，不会影响你的个人数据。
 
-**优点：**
-- 价格便宜，适合一次性下载
-- 操作简单，登录 App Store 即可
-- 不需要自己注册外区账号
+<div class="not-prose grid md:grid-cols-2 gap-4 my-6">
 
-**注意事项：**
-- 不要登录 iCloud
-- 不要绑定自己的手机号或支付方式
-- 下载完成后立即退出
-- 不要在共享账号上开启双重认证
+<div class="p-5 bg-green-50 dark:bg-green-950/30 rounded-xl border border-green-500">
+  <p class="font-semibold text-green-800 dark:text-green-200 mb-2">✅ 优点</p>
+  <ul class="text-sm text-green-700 dark:text-green-300 space-y-1">
+    <li>价格便宜，适合一次性下载</li>
+    <li>操作简单，登录 App Store 即可</li>
+    <li>不需要自己注册外区账号</li>
+  </ul>
+</div>
 
-## 独享账号详解
+<div class="p-5 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-500">
+  <p class="font-semibold text-amber-800 dark:text-amber-200 mb-2">⚠️ 注意事项</p>
+  <ul class="text-sm text-amber-700 dark:text-amber-300 space-y-1">
+    <li>不要登录 iCloud</li>
+    <li>不要绑定自己的手机号或支付方式</li>
+    <li>下载完成后立即退出</li>
+    <li>不要在共享账号上开启双重认证</li>
+  </ul>
+</div>
+
+</div>
+
+---
+
+## 🔒 独享账号详解
 
 独享账号是你一个人拥有的 Apple ID，可以自由修改密码、密保和安全设置。
 
-**优点：**
-- 完全掌控，安全可靠
-- 可自由修改密码和密保
-- 支持登录 iCloud 同步数据
-- 不会被他人使用或锁定
+<div class="not-prose grid md:grid-cols-2 gap-4 my-6">
 
-**适合：**
-- 需要长期使用 Shadowrocket 的用户
-- 愿意为安全性付费的用户
-- 需要在多台设备上使用的用户
+<div class="p-5 bg-green-50 dark:bg-green-950/30 rounded-xl border border-green-500">
+  <p class="font-semibold text-green-800 dark:text-green-200 mb-2">✅ 优点</p>
+  <ul class="text-sm text-green-700 dark:text-green-300 space-y-1">
+    <li>完全掌控，安全可靠</li>
+    <li>可自由修改密码和密保</li>
+    <li>支持登录 iCloud 同步数据</li>
+    <li>不会被他人使用或锁定</li>
+  </ul>
+</div>
+
+<div class="p-5 bg-brand-50 dark:bg-brand-950/30 rounded-xl border border-brand-500">
+  <p class="font-semibold text-brand-800 dark:text-brand-200 mb-2">🎯 适合</p>
+  <ul class="text-sm text-brand-700 dark:text-brand-300 space-y-1">
+    <li>需要长期使用 Shadowrocket 的用户</li>
+    <li>愿意为安全性付费的用户</li>
+    <li>需要在多台设备上使用的用户</li>
+  </ul>
+</div>
+
+</div>
+
+---
 
 ## 如何选择？
 
 | 你的情况 | 建议 |
-|----------|------|
+|----------|:----:|
 | 只想下载一次，偶尔使用 | 共享账号 |
 | 长期使用，多设备切换 | 独享账号 |
 | 需要安全性和隐私保障 | 独享账号 |
 | 预算有限，临时需要 | 共享账号 |
 | 想配合 iCloud 使用 | 独享账号 |
 
-> 💡 **建议**：如果只是下载 Shadowrocket，共享账号足够使用。如果需要长期使用且重视安全性，建议选择独享账号。
+{% include tip-box.html type="tip" title="建议" content="如果只是下载 Shadowrocket，共享账号足够使用。如果需要长期使用且重视安全性，建议选择独享账号。" %}
 
-## 使用安全建议
+---
 
-1. **仅登录 App Store**：无论哪种账号，都只登录 App Store，不要在「设置」中登录
-2. **下载后退出**：完成下载后立即退出外区 Apple ID
-3. **不要绑定支付**：不要在共享账号上绑定信用卡或支付宝
-4. **定期更换密码**：独享账号建议定期更换密码
-5. **开启双重认证**：独享账号务必开启双重认证保护
+## 🛡️ 使用安全建议
+
+1. **仅登录 App Store** — 无论哪种账号，都只登录 App Store，不要在「设置」中登录
+2. **下载后退出** — 完成下载后立即退出外区 Apple ID
+3. **不要绑定支付** — 不要在共享账号上绑定信用卡或支付宝
+4. **定期更换密码** — 独享账号建议定期更换密码
+5. **开启双重认证** — 独享账号务必开启双重认证保护
