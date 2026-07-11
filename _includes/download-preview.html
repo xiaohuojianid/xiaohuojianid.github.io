@@ -32,13 +32,16 @@
           {% assign download_items = "iOS 下载|/download/ios/|已在 iOS 设备上安装？|如何恢复已购应用|/download/ios/#restore|换了新手机？|Apple ID 下载|/download/apple-id/|需要外区 Apple ID？|安装教程|/download/tutorial/|第一次安装 Shadowrocket？|常见错误解决|/errors/|下载或安装出错了？" | split: "|" %}
           {% for i in (0..3) %}
           {% assign base = i | times: 4 %}
-          <a href="{{ download_items[base | plus: 1] }}" class="flex items-center gap-4 p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group">
+          {% assign idx_url = base | plus: 1 %}
+          {% assign idx_desc = base | plus: 2 %}
+          {% assign idx_num = i | plus: 1 %}
+          <a href="{{ download_items[idx_url] }}" class="flex items-center gap-4 p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group">
             <div class="w-10 h-10 bg-brand-100 dark:bg-brand-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-              <span class="text-lg">{{ forloop.index }}</span>
+              <span class="text-lg">{{ idx_num }}</span>
             </div>
             <div>
               <h4 class="font-semibold group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">{{ download_items[base] }}</h4>
-              <p class="text-sm text-gray-500 dark:text-gray-400">{{ download_items[base | plus: 2] }}</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">{{ download_items[idx_desc] }}</p>
             </div>
             <svg class="w-5 h-5 text-gray-400 flex-shrink-0 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>

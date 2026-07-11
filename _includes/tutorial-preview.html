@@ -7,15 +7,18 @@
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {% assign tutorials = "小火箭下载教程|/tutorial/#download|📥|Shadowrocket 怎么下载？完整下载教程|shadowrocket-tutorial-download|安装教程|/tutorial/#install|📲|iPhone / iPad 安装 Shadowrocket 全步骤|shadowrocket-tutorial-install|配置订阅|/tutorial/#config|🔗|如何导入 Clash / V2Ray 订阅|shadowrocket-tutorial-sub|进阶教程|/tutorial/#advanced|🚀|Sing-box 导入、规则配置、分流策略|shadowrocket-tutorial-adv" | split: "|" %}
+      {% assign tutorials = "小火箭下载教程|/tutorial/#download|📥|Shadowrocket 怎么下载？完整下载教程|安装教程|/tutorial/#install|📲|iPhone / iPad 安装 Shadowrocket 全步骤|配置订阅|/tutorial/#config|🔗|如何导入 Clash / V2Ray 订阅|进阶教程|/tutorial/#advanced|🚀|Sing-box 导入、规则配置、分流策略" | split: "|" %}
       {% for i in (0..3) %}
-      {% assign base = i | times: 5 %}
-      <a href="{{ tutorials[base | plus: 1] }}"
+      {% assign base = i | times: 4 %}
+      {% assign idx_url = base | plus: 1 %}
+      {% assign idx_emoji = base | plus: 2 %}
+      {% assign idx_desc = base | plus: 3 %}
+      <a href="{{ tutorials[idx_url] }}"
          class="reveal opacity-0 translate-y-8 transition-all duration-700 group bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow"
          style="transition-delay: {{ i | times: 100 }}ms">
-        <div class="text-3xl mb-4">{{ tutorials[base | plus: 2] }}</div>
+        <div class="text-3xl mb-4">{{ tutorials[idx_emoji] }}</div>
         <h3 class="font-bold mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">{{ tutorials[base] }}</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400">{{ tutorials[base | plus: 3] }}</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400">{{ tutorials[idx_desc] }}</p>
       </a>
       {% endfor %}
     </div>
