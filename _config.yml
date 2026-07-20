@@ -1,11 +1,11 @@
-# Shadowrocket 小火箭账号资源中心
-title: 小火箭账号资源中心
-tagline: Shadowrocket 小火箭账号知识、下载指南、配置教程与常见问题
-description: 提供小火箭账号知识、Apple ID 使用教程、下载指南、配置教程与常见问题。覆盖共享账号、独享账号、Shadowrocket安装等完整内容。
+# 小火箭ID账号 - Shadowrocket 账号购买与使用指南
+title: 小火箭ID账号
+tagline: Shadowrocket 小火箭账号购买、共享账号、独享账号、Apple ID 使用教程
+description: 小火箭ID账号专注提供 Shadowrocket 小火箭账号相关服务，包括共享账号、独享账号、美区 Apple ID 注册教程、下载指南、配置教程与常见问题解答。
 url: https://xiaohuojianid.github.io
 baseurl: ""
 author:
-  name: 小火箭账号资源中心
+  name: 小火箭ID账号
 
 # SEO
 lang: zh-CN

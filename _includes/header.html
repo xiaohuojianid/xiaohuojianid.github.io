@@ -5,13 +5,13 @@
             <svg class="w-8 h-8 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
             </svg>
-            <span class="text-lg font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">一元机场</span>
+            <span class="text-lg font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">小火箭ID</span>
         </a>
 
         <!-- Nav Links (Desktop) -->
         <div class="hidden md:flex items-center space-x-1">
-            {% assign nav_names = "首页|机场|评测|教程|下载|FAQ|博客" | split: "|" %}
-            {% assign nav_urls = "/|/airport/|/review/|/tutorial/|/download/|/faq/|/blog/" | split: "|" %}
+            {% assign nav_names = "首页|账号指南|共享账号|独享账号|下载|教程|FAQ" | split: "|" %}
+            {% assign nav_urls = "/|/account/|/shared-id/|/exclusive-id/|/download/|/tutorial/|/faq/" | split: "|" %}
             {% for item in nav_names %}
                 {% assign url = nav_urls[forloop.index0] %}
                 {% assign current = page.url %}
