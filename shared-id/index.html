@@ -59,14 +59,26 @@ show_cta: false
 ---
 
 <style>
-details.srq{background:var(--color-surface,#f8fafc);border:1px solid #e2e8f0;border-radius:10px;margin:10px 0;overflow:hidden}
+/* ===== 图片 ===== */
+.sr-fig{margin:22px 0;text-align:center}
+.sr-img{display:block;max-width:100%;width:auto;height:auto;border-radius:12px;margin:0 auto;box-shadow:0 6px 24px rgba(0,0,0,.15)}
+.sr-img-cap{display:block;font-size:13px;color:#94a3b8;margin:8px 0 0}
+.dark .sr-img-cap{color:#64748b}
+/* ===== FAQ/文章折叠（覆盖 prose 干扰） ===== */
+details.srq{background:var(--color-surface,#f8fafc);border:1px solid #e2e8f0;border-radius:10px;margin:12px 0;overflow:hidden}
 .dark details.srq{background:#1e293b;border-color:#334155}
-details.srq summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none;position:relative;padding-right:40px}
-details.srq summary::-webkit-details-marker{display:none}
-details.srq summary::after{content:"+";position:absolute;right:18px;top:12px;font-size:20px;color:#3b82f6}
+details.srq summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none;position:relative;padding-right:40px;margin:0 !important;display:block;background:rgba(59,130,246,.05)}
+.dark details.srq summary{background:rgba(59,130,246,.08)}
+details.srq summary::-webkit-details-marker{display:none !important}
+details.srq summary::marker{content:"" !important}
+details.srq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:20px;color:#3b82f6;line-height:1}
+details.srq[open] summary{background:rgba(59,130,246,.12)}
 details.srq[open] summary::after{content:"–"}
-details.srq .faq-body,details.srq .article-body{padding:0 18px 16px;color:#64748b;font-size:15px}
+details.srq summary:hover{background:rgba(59,130,246,.14)}
+details.srq .faq-body,details.srq .article-body{padding:2px 18px 16px;color:#64748b;font-size:15px}
 .dark details.srq .faq-body,.dark details.srq .article-body{color:#94a3b8}
+details.srq .faq-body p,details.srq .article-body p{margin:10px 0}
+/* ===== 演示账号卡片 ===== */
 .accounts{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
 .acct{background:var(--color-surface,#fff);border:1px solid #e2e8f0;border-radius:10px;padding:14px}
 .dark .acct{background:#1e293b;border-color:#334155}
@@ -76,6 +88,10 @@ details.srq .faq-body,details.srq .article-body{padding:0 18px 16px;color:#64748
 .btn{background:#3b82f6;color:#fff;border:none;border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer}
 .btn:hover{opacity:.85}
 .btn.copied{background:#22c55e}
+/* ===== 表格 ===== */
+.sr-table-wrap{overflow-x:auto;margin:16px 0}
+.sr-table-wrap table{margin:0;min-width:520px}
+/* ===== 内链 ===== */
 .rel-links{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
 .rel-links a{background:var(--color-surface,#fff);border:1px solid #e2e8f0;border-radius:20px;padding:6px 14px;font-size:14px}
 .dark .rel-links a{background:#1e293b;border-color:#334155}
@@ -96,7 +112,12 @@ details.srq .faq-body,details.srq .article-body{padding:0 18px 16px;color:#64748
 - 部分网络工具类应用仅限海外区下载
 - 美区、日区经常有独占应用与限免活动
 - 使用**美国Apple ID**还能享受美区App的价格与优惠
-![共享账号使用流程](img/share-account.webp)
+
+<figure class="sr-fig">
+<img class="sr-img" src="https://xiaohuojianid.github.io/img/apple-us-id.webp" alt="苹果海外ID的Apple ID管理界面示意图" width="1536" height="1024" loading="lazy">
+<figcaption class="sr-img-cap">苹果海外ID登录App Store即可下载海外应用</figcaption>
+</figure>
+
 ## 小火箭Shadowrocket为什么需要海外Apple ID
 
 **Shadowrocket（小火箭）**是一款著名的iOS网络代理工具，可以帮助用户管理节点、访问海外网络。由于政策原因，小火箭在国内App Store搜索不到，只能通过海外区App Store下载。
@@ -107,6 +128,11 @@ details.srq .faq-body,details.srq .article-body{padding:0 18px 16px;color:#64748
 2. **使用小火箭共享账号**：登录共享的**Shadowrocket账号**，下载后退出，成本更低、无需自己注册
 
 对于只是"下载一次小火箭"的用户，**小火箭共享账号**是性价比最高的选择——这也是**苹果ID共享账号**在国内流行的主要原因。
+
+<figure class="sr-fig">
+<img class="sr-img" src="https://xiaohuojianid.github.io/img/tutorial.webp" alt="小火箭Shadowrocket使用场景示意图" width="2848" height="1600" loading="lazy">
+<figcaption class="sr-img-cap">Shadowrocket小火箭：节点管理、代理切换，轻松访问海外网络</figcaption>
+</figure>
 
 ## 苹果海外ID类型介绍
 
@@ -119,6 +145,11 @@ details.srq .faq-body,details.srq .article-body{padding:0 18px 16px;color:#64748
 
 > 提示：不同地区的Apple ID可下载的应用不同，选择前先确认目标应用所在地区。
 
+<figure class="sr-fig">
+<img class="sr-img" src="https://xiaohuojianid.github.io/img/share-account.webp" alt="苹果ID共享账号使用流程示意图" width="800" height="449" loading="lazy">
+<figcaption class="sr-img-cap">共享Apple ID使用流程：登录App Store → 下载 → 退出</figcaption>
+</figure>
+
 ## 共享Apple ID使用说明
 
 使用**苹果ID共享账号**下载应用，请严格按以下步骤操作。
@@ -129,18 +160,22 @@ details.srq .faq-body,details.srq .article-body{padding:0 18px 16px;color:#64748
 2. 点击右上角头像 → 滚动到底部 → 点击「退出登录」
 3. 输入共享账号的Apple ID和密码 → 点击「登录」
 
-
 ### 下载应用
 
 1. 登录后在App Store搜索「Shadowrocket」或目标应用
 2. 点击获取/安装按钮，等待下载完成
+
+<figure class="sr-fig">
+<img class="sr-img" src="https://xiaohuojianid.github.io/img/shadowrocket-download.webp" alt="Shadowrocket小火箭下载安装步骤示意图" width="1125" height="2435" loading="lazy">
+<figcaption class="sr-img-cap">Shadowrocket小火箭下载安装完整步骤</figcaption>
+</figure>
 
 ### 退出账号
 
 1. 下载完成后回到App Store右上角头像
 2. 滚动到底部 → 点击「退出登录」
 3. 重新登录你自己的Apple ID
-![Shadowrocket 使用场景示意](img/tutorial.webp)  
+
 > ⚠️ **绝对不要做：** 不要在「设置」中登录共享ID；不要登录iCloud；不要绑定支付方式；不要开启双重认证；不要修改账号密码或安全信息。
 
 > ✅ **安全建议：** 下载完成立即退出；从正规渠道获取共享账号；定期更换使用的共享账号；重要数据始终备份在自己的Apple ID上。
@@ -179,7 +214,7 @@ details.srq .faq-body,details.srq .article-body{padding:0 18px 16px;color:#64748
 <details class="srq"><summary>苹果ID共享适合什么人群？</summary><div class="faq-body">适合只需要下载一两次海外应用（如小火箭）、不想自己注册海外ID的用户；也适合想先体验再决定是否购买独享账号的用户。</div></details>
 <details class="srq"><summary>怎么防止共享账号被锁定？</summary><div class="faq-body">下载完成立即退出；不在多台设备同时登录；不修改密码；不绑定支付；不开启双重认证；不用于iCloud。规范使用可大幅降低锁定概率。</div></details>
 <details class="srq"><summary>海外ID下载的应用能正常使用吗？</summary><div class="faq-body">能。应用下载后归属于你的设备，正常使用不受影响。更新时若提示账号，重新登录原共享账号更新即可。</div></details>
-![Apple ID 管理界面](img/apple-id.webp) 
+
 ## 免费测试账号展示
 
 以下为页面展示用的**演示账号**，用于测试登录格式与页面功能。每组均带账号、密码复制按钮。
@@ -223,7 +258,7 @@ details.srq .faq-body,details.srq .article-body{padding:0 18px 16px;color:#64748
 <details class="srq"><summary>小火箭共享账号和普通账号下载有区别吗？</summary><div class="article-body"><p>小火箭共享账号下载的Shadowrocket与普通账号购买的应用功能完全一样，都是完整版，可以正常更新和使用。区别在于：共享账号多人共用，需要下载后立即退出；普通（独享）账号一人专用，可长期登录。从软件本身来看没有任何区别，你下载的小火箭可以正常添加节点、正常科学上网。</p></div></details>
 <details class="srq"><summary>苹果海外ID价格一般是多少？</summary><div class="article-body"><p>苹果海外ID的价格因类型而异：共享账号最便宜，几元到十几元，主要用于登录下载；独享成品账号价格较高，从十几元到几十元不等，通常带质保和包换服务；自己注册完全免费。Shadowrocket本体在美区约3美元。建议根据使用频率选择：偶尔下载选共享，经常使用选独享，不着急可以自己注册。</p></div></details>
 <details class="srq"><summary>苹果ID共享账号被锁定怎么处理？</summary><div class="article-body"><p>苹果ID共享账号被锁定后，首先不要反复尝试登录，频繁尝试会延长锁定时间。正确做法是联系账号提供方，正规渠道一般提供解锁或更换服务。如果是自己注册的海外ID被锁，可以通过苹果官网的账号恢复流程申诉。平时规范使用（不在多设备同时登录、不改密码）可以最大程度避免共享账号被锁定。</p></div></details>
-![Shadowrocket 下载安装步骤](img/shadowrocket-download.webp) 
+
 ### 相关推荐
 
 <div class="rel-links">
