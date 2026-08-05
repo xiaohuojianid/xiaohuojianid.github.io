@@ -6,8 +6,8 @@
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {% assign cards = "下载中心|/download/|📥|Shadowrocket 下载与安装全流程|教程中心|/tutorial/|📚|从零开始的完整使用教程|账号指南|/guide/|🔑|共享账号与独享账号详解|Apple ID 教程|/ios/|🍎|美区 Apple ID 注册与使用|配置教程|/tutorial/#config|⚙️|节点订阅导入与配置|常见问题|/faq/|❓|50+ 常见问题解答" | split: "|" %}
-      {% for i in (0..5) %}
+      {% assign cards = "小火箭共享账号|/shared-id/|👥|苹果ID共享下载Shadowrocket教程|下载中心|/download/|📥|Shadowrocket 下载与安装全流程|教程中心|/tutorial/|📚|从零开始的完整使用教程|账号指南|/guide/|🔑|共享账号与独享账号详解|Apple ID 教程|/ios/|🍎|美区 Apple ID 注册与使用|配置教程|/tutorial/#config|⚙️|节点订阅导入与配置|常见问题|/faq/|❓|50+ 常见问题解答" | split: "|" %}
+      {% for i in (0..6) %}
       {% assign base = i | times: 4 %}
       {% assign idx_url = base | plus: 1 %}
       {% assign idx_emoji = base | plus: 2 %}
